@@ -3,132 +3,159 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 
 /*
  * A better looking default horizontal rule
  */
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+ hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
-    resize: vertical;
+ textarea {
+  resize: vertical;
 }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
-}
+  }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-    font-family:'Amiko', sans-serif;
+   body {
+    font-family:'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 90%;
     margin: 0;
     text-align: center;
     /* background-origin: padding-box; */
     background-color: #F2F2F2;
+    letter-spacing: .4px;
+    line-height: 2;
+      background: url("../images/greybackground.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-}
+  }
 
-img {
+  img {
     max-width: 100%;
-}
+  }
 
-header {
+  a {
+    color: #1ECD97;
+    text-decoration: none;
+    background-color: transparent;
+
+  }
+
+  a:hover {
+    color: #5A5755;
+    outline: 0;
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+  }
+
+
+  /* Header */ 
+
+  header {
     background-image: url("../images/abs.jpeg");
     box-shadow: 1px 1px 1px 1px;
     top: 0;
     width: 100%;
-    z-index: 50;
+    z-index: 100;
     display: inline-block;
     padding-top: 30px;
     background-size: cover;
     background-position: center;
     opacity: 1;
     height: 450px;
+  }
+
+  header h1 {
+    font-family:'Proza Libre', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222923;
+    margin: .67em 0;
+    font-size: 6em;
+    margin-bottom: 100px;
+    padding-bottom: 250px;
+  }
+
+  .line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0em;}
+  to{width: 16em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
-nav{
+ /* header h3{
+    font-family: 'Work Sans', sans-serif;
+    color:#222923;
+    font-size: 2em;
+    margin-bottom: 800px;
+    margin-top: 0px;
+  } */ 
+
+
+  /* Nav Bar */ 
+
+  nav{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family:'Rubik', sans-serif;
     padding: 45px 0 0 0;
     text-align: center;
     z-index: 100;
     background-color: white;
-}
+  }
 
-nav a {
+  nav a {
     font-weight: 600;
     letter-spacing: 0.75px;
     padding: 20px 60px;
@@ -139,159 +166,249 @@ nav a {
     cursor: pointer;
     transition: all .3s ease-in-out;
     border-right: 2px dotted white;
-}
+  }
 
 
-.main-nav a:hover {
-  border-right: 2px dotted black;
-  padding-bottom: 24px;
-}
+  .main-nav a:hover {
+    border-right: 2px dotted black;
+    padding-bottom: 24px;
+  }
 
-header h1 {
-    font-family: 'News Cycle', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #030800;
-    margin: .67em 0;
-    font-size: 6em;
-    margin-top: 150px;
-}
+  .hamburger {
+    background-color: white;
+    font-size: 27px;
+    padding: 10px 20px;
+    display: none;
+  }
 
-header h3{
-    font-family: 'Quicksand', sans-serif;
-    color:#030800;
-    font-size: 2em;
-}
 
-.flex-wrapper {
+
+  /* Left hand column */ 
+
+  .flex-wrapper {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0 30px 54.4px 30px;
+    color: #222923;
+  }
+
+  .main-article {
+    width: 65%;
+    height: auto;
+  }
+
+  .content-area{
+   -webkit-box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.46);
+   background-color: #fff;
+   overflow: hidden;
+   margin-bottom:30px;
+   padding-bottom:30px;
+   padding-top:15px;
+   width: 700px;
+ }
+
+ article img {
+  width: 640px;
+  height: 427px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+
 }
 
-.main-article {
-    width: 60%;
+
+.featured p {
+  margin-left: 25px;
+  text-align: left;
+  line-height: 15px;
 }
+
+button {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid #1ECD97;
+  color:#1ECD97;
+  letter-spacing:1px;
+  text-shadow:0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+
+}
+button:hover {
+  color:white;
+  background: #1ECD97;
+}
+
+button:active {
+  //letter-spacing: 2px;
+  letter-spacing: 2px ;
+}
+
+.slide2{
+  display: none;
+  z-index: 1;
+}
+
+.slide3{
+  display: none;
+  z-index: 2;
+}
+
+
+/* About Me- Righthand Column*/ 
 
 aside{
-    width:40%;
+  width:35%;
+  margin-left: 100px;
+  margin-top: 45px;
+  float: left;
 }
 
+.about {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: inset 0px 2px 5px 5px #1ECD97;
+  border-top: 10px;
+  background-color: white;
+}
+
+.sidebar .widget {
+    margin-bottom: 0;
+    padding: 20px 0px;
+    word-wrap: break-word;
+}
+
+
+.well {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+aside button {
+  margin-top: 10px;
+}
 
 aside img {
-    height: 245px;
-    width: 150px;
+  height: 245px;
+  width: 150px;  
+  opacity: 1;
+
 }
 
+aside p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 h1,h2, {
-    font-family: 'News Cycle', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222923;
 }
 
-h1 {
-    font-size: 240%;
-    margin-top: 140px;
+.sticky {
+  position: relative;
+  top: 0;
 }
-
+/* Archive Articles*/ 
+.wrapper{
+  background-color: white;
+  margin-top: 2em;
+  padding-bottom:75px;
+}
 .past {
-    display: flex;
-    flex-direction: row;
-    border-top: 1px solid #ffffff;
-    padding: 10px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #1ECD97;
+  padding: 10px;
+  justify-content: space-between;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 2px 5px 5px #1ECD97;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  border: outset;
 }
 
 .past article {
-    width: 30%;
+  width: 30%;
+  height: auto;
+  font-size: 20px; 
 }
+
+.past img {
+  width: 350px;
+  height: 200px;
+  cursor: pointer;
+  border: 10px solid #eee;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
+}
+
+.past img:hover {
+   opacity: 1;
+   
+   /*Reflection*/
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+ 
+   /*Glow*/
+  -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+  box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}  
+
+.wrapper h2 {
+  padding-top: 75px;
+  padding-bottom:25px;
+  justify-content: center;
+}
+
+.past a:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Footer */ 
+
 
 footer {
-    clear:both;
-    padding: 5px 10px;
+  clear:both;
+  padding: 5px 10px;
+  height: 100px;
+  padding-top: 50px;
+  text-align: center;
+  overflow: auto;
+  background-color: #1ECD97;
 }
 
+
 footer p {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 75%;
-    text-align: right;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 75%;
+  text-align: right;
+  justify-content: center;
 }
 
 footer a {
-    color: #807c72;
+  color: #222923;
+  overflow: auto;
+}
+
+footer h4 {
+  color: #FFF;
+  font-size: 2em;
 }
 
 
-a {
-    color: #b5c1ad;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-a:hover {
-    color: #5A5755;
-    outline: 0;
-    -webkit-transition: color .3s ease-in-out;
-    transition: color .3s ease-in-out;
-}
-
-.hamburger{
-    display: none;
-}
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
 
 /*
  * Clearfix: contain floats
@@ -305,108 +422,80 @@ a:hover {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+ .clearfix:before,
+ .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/* Media Queries */
+@media screen and (max-width: 450px) {
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  .flex-wrapper {
+    flex-wrap:wrap;
+  }
+
+  section {
+    width:100%;
+  }
+
+  .hamburger {
+    display: block;
+    text-align: right;
+  }
+
+  nav a { 
+    display: none;
+  }
+
+
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media screen and (max-width: 660px) {
+
+  .flex-wrapper {
+    flex-wrap:wrap;
+  }
+
+  section {
+    width:50%;
+  }
+
+  .hamburger {
+    display: block;
+    text-align: right;
+  }
+
+  nav a { 
+    display: none;
+  }
+
+
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+@media screen and (max-width: 960px) {
 
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  .flex-wrapper {
+    flex-wrap:wrap;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  section {
+    width:33%;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  .hamburger {
+    display: block;
+    text-align: right;
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  nav a { 
+    display: none;
+  }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
+
